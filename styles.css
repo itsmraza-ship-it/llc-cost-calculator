@@ -1,0 +1,100 @@
+/* Epics Deals brand: yellow #FED716 on black #0A0A0A — dark premium theme */
+
+:root {
+  --yellow: #FED716;
+  --black: #0A0A0A;
+  --panel: #141414;
+  --panel-2: #1c1c1c;
+  --text: #f2f2f2;
+  --muted: #a8a8a8;
+  --line: #2a2a2a;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--text);
+  font-family: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+}
+
+.page { max-width: 980px; margin: 0 auto; padding: 32px 20px 48px; }
+
+.brand { display: flex; gap: 18px; align-items: center; margin-bottom: 32px; }
+.logo { width: 64px; height: 64px; object-fit: contain; }
+.brand h1 { margin: 0 0 4px; font-size: 1.9rem; letter-spacing: -0.5px; }
+.tagline { margin: 0; color: var(--muted); }
+.tagline strong { color: var(--yellow); }
+
+.grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+
+.card h2 { font-size: 1.05rem; margin: 0 0 14px; color: var(--yellow); text-transform: uppercase; letter-spacing: 1px; }
+.card h2:not(:first-child) { margin-top: 26px; }
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.hint { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0; }
+
+.addon {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.addon input { accent-color: var(--yellow); width: 18px; height: 18px; }
+.addon span { flex: 1; }
+.addon em { font-style: normal; color: var(--yellow); font-weight: 700; }
+.addon:has(input:disabled) { opacity: 0.75; cursor: default; }
+
+.disclaimer { color: var(--muted); font-size: 0.82rem; margin: 18px 0 0; }
+
+.total-card { position: sticky; top: 20px; align-self: start; }
+
+.breakdown { list-style: none; margin: 0 0 16px; padding: 0; }
+.breakdown li {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 0.95rem;
+}
+.breakdown li strong { color: var(--text); white-space: nowrap; }
+
+.grand-total {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 1.25rem; margin: 6px 0 22px;
+}
+.grand-total strong { color: var(--yellow); font-size: 2rem; }
+
+.cta {
+  display: block; text-align: center;
+  background: var(--yellow); color: #000;
+  font-weight: 800; font-size: 1.05rem; text-decoration: none;
+  padding: 15px; border-radius: var(--radius);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.cta:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(254, 215, 22, 0.35); }
+
+.cta-sub { text-align: center; color: var(--muted); font-size: 0.88rem; }
+.cta-sub a { color: var(--yellow); }
+
+footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.9rem; }

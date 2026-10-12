@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US LLC Cost Calculator — Epics Deals</title>
+  <meta name="description" content="Interactive calculator: see exactly what a US LLC costs — $130 formation + your state's filing fee. By Epics Deals.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="brand">
+      <img src="assets/epics-deals-ed-monogram.png" alt="Epics Deals logo" class="logo" onerror="this.style.display='none'">
+      <div>
+        <h1>US LLC Cost Calculator</h1>
+        <p class="tagline">Transparent pricing. No surprises. <strong>$130 + state fee.</strong></p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>1 · Pick your state</h2>
+        <select id="state" aria-label="Choose your state">
+          <option value="new-mexico">New Mexico — $50</option>
+          <option value="missouri">Missouri — $50</option>
+          <option value="delaware">Delaware — $90</option>
+          <option value="wyoming" selected>Wyoming — $102</option>
+          <option value="florida">Florida — $125</option>
+          <option value="texas">Texas — $308</option>
+          <option value="other">Another state — varies</option>
+        </select>
+        <p class="hint" id="state-note">Wyoming: strong privacy, low annual costs.</p>
+
+        <h2>2 · Add optional extras</h2>
+        <label class="addon">
+          <input type="checkbox" id="addon-ein" checked disabled>
+          <span><strong>EIN (tax ID)</strong> — included free with formation</span>
+          <em>$0</em>
+        </label>
+        <label class="addon">
+          <input type="checkbox" id="addon-expedited">
+          <span><strong>Expedited 48-hour processing</strong> — where the state supports it</span>
+          <em>+$50</em>
+        </label>
+        <label class="addon">
+          <input type="checkbox" id="addon-address">
+          <span><strong>Unique virtual address</strong> — instead of the free shared one</span>
+          <em>+$30</em>
+        </label>
+
+        <p class="disclaimer">State fees change — always verify at the state's filing office.
+          EIN is included free with formation. Bank and payment-provider approvals are
+          always subject to the provider's own decision.</p>
+      </section>
+
+      <section class="card total-card">
+        <h2>Your total</h2>
+        <ul class="breakdown" id="breakdown"></ul>
+        <div class="grand-total"><span>Total</span><strong id="total">$0</strong></div>
+        <a class="cta" href="https://epicsdeals.com" target="_blank" rel="noopener">Start my LLC — $130 + state fee →</a>
+        <p class="cta-sub">Questions? <a href="https://wa.link/x6klxo" target="_blank" rel="noopener">WhatsApp us</a> ·
+          <a href="mailto:info@epicsdeals.com">info@epicsdeals.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built by <strong>Epics Deals</strong> — US company formation for founders worldwide.</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
